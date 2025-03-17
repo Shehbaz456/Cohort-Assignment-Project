@@ -1,0 +1,220 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: background-image 1s ease;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Quote Card Styles */
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quote-card {
+    background-color: rgba(200, 230, 255, 0.75);
+    backdrop-filter: blur(10px);
+
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.quote-content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.quote-icon {
+    color: #6c63ff;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+#quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-style: italic;
+    line-height: 1.4;
+    margin: 15px 0;
+    color: #333;
+}
+
+.quote-author {
+    text-align: right;
+    font-size: 18px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Button Styles */
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    min-width: 120px;
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.primary-btn {
+    background-color: #6c63ff;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #5a52d5;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.secondary-btn:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+.twitter-btn {
+    background-color: #1DA1F2;
+    color: white;
+}
+
+.twitter-btn:hover {
+    background-color: #0d8ecf;
+    transform: translateY(-2px);
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background-color: #333;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+/* Loading State */
+.loading #quote-text {
+    background-color: #eee;
+    color: transparent;
+    animation: loading-pulse 1.5s infinite;
+    border-radius: 4px;
+}
+
+.loading .quote-author {
+    background-color: #eee;
+    color: transparent;
+    width: 150px;
+    margin-left: auto;
+    animation: loading-pulse 1.5s infinite;
+    border-radius: 4px;
+}
+
+@keyframes loading-pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .quote-card {
+        padding: 30px;
+    }
+    
+    #quote-text {
+        font-size: 22px;
+    }
+    
+    .quote-author {
+        font-size: 16px;
+    }
+    
+    .btn {
+        padding: 10px 16px;
+        font-size: 14px;
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-card {
+        padding: 20px;
+    }
+    
+    #quote-text {
+        font-size: 18px;
+    }
+    
+    .quote-icon {
+        font-size: 18px;
+    }
+    
+    .buttons-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}

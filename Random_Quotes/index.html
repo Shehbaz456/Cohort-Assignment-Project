@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quotes Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="quote-container" id="quote-container">
+            <div class="quote-card" id="quote-card">
+                <div class="quote-content">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p id="quote-text">Life is what happens when you're busy making other plans.</p>
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                </div>
+                <div class="quote-author">
+                    <p>— <span id="author">John Lennon</span></p>
+                </div>
+            </div>
+            
+            <div class="buttons-container">
+                <button id="new-quote-btn" class="btn primary-btn">
+                    <i class="fa-solid fa-rotate-right"></i> New Quote
+                </button>
+                <button id="copy-btn" class="btn secondary-btn">
+                    <i class="fa-solid fa-copy"></i> Copy
+                </button>
+                <button id="twitter-btn" class="btn twitter-btn">
+                    <i class="fa-brands fa-twitter"></i> Share
+                </button>
+                <button id="export-btn" class="btn secondary-btn">
+                    <i class="fa-solid fa-download"></i> Export
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="toast" class="toast">Quote copied to clipboard!</div>
+    
+    <script src="script.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</body>
+</html>
