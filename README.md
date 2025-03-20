@@ -1,7 +1,8 @@
 # Cohort-Assignment-Project
 This is Our Cohort Assignment Projects Store
-
+___
 ### ( 01 ) Random Quote Project
+___
 
 #### Live Link: https://randomquotes100.vercel.app
 
@@ -31,10 +32,9 @@ https://freeapi.hashnode.space/api-guide/apireference/getARandomQuote
 ![image](https://github.com/user-attachments/assets/5092ad21-e546-49c7-a1b4-76e1e7f170d9)
 
 ---
-***
-___
 
 ### ( 2 ) YouTube Video Listing
+___
 
 #### Live Link: https://listingpage100.vercel.app
 
@@ -59,5 +59,5 @@ https://freeapi.hashnode.space/api-guide/apireference/getYoutubeVideos
 ### Screenshot
 ![image](https://github.com/user-attachments/assets/8f9bea3a-f6b1-4259-9d54-4eaa7fbf0616)
 
-
+---
 
