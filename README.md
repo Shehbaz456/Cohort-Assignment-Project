@@ -30,8 +30,8 @@ https://freeapi.hashnode.space/api-guide/apireference/getARandomQuote
 ### Screenshot
 ![image](https://github.com/user-attachments/assets/5092ad21-e546-49c7-a1b4-76e1e7f170d9)
 
-
-
+---
+***
 ___
 
 ### ( 2 ) YouTube Video Listing
