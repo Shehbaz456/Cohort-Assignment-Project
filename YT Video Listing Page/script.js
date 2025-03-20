@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
       videosList.forEach((video) => {
         const snippet = video.items.snippet
         const statistics = video.items.statistics
-  
+        const videoId = video.items.id
         createVideoCard(
           snippet.title,
           snippet.channelTitle,
@@ -213,12 +213,13 @@ document.addEventListener("DOMContentLoaded", () => {
           statistics.viewCount,
           snippet.publishedAt,
           statistics.likeCount,
+          videoId
         )
       })
     }
   
     // Create video card
-    function createVideoCard(videoTitle, channelTitle, thumbnailUrl, description, viewCount, publishedTime, likeCount) {
+    function createVideoCard(videoTitle, channelTitle, thumbnailUrl, description, viewCount, publishedTime, likeCount,videoId) {
       if (description.length > 200) {
         description = description.substring(0, 200) + "..."
       }
@@ -238,6 +239,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const card = document.createElement("div")
       card.classList.add("video-card")
       card.innerHTML = `
+              <div  onclick="window.open('https://www.youtube.com/watch?v=${videoId}', '_blank')" >
+            
               <div class="thumbnail-container">
                   <img src="${thumbnailUrl}" alt="${videoTitle}" class="thumbnail">
               </div>
@@ -261,6 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   <p class="video-description">${description}</p>
                   <p class="channel-title">- ${channelTitle}</p>
                   <p class="Date-Publish">${formattedDate}</p>
+              </div>
               </div>
           `
       videosContainer.appendChild(card)
@@ -326,5 +330,3 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize the app
     fetchVideos()
   })
-  
-  
