@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +8,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
     <header>
         <div class="navbar">
             <div class="logo">
                 <img src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg" alt="YouTube Logo">
             </div>
-            <div class="search-container">
+            <div class="search-container desktop-search">
                 <input type="text" id="search-input" placeholder="Search videos...">
                 <button id="search-button">
                     <svg viewBox="0 0 24 24" focusable="false">
@@ -31,24 +29,24 @@
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
-            <div class="mobile-menu">
-                <div class="search-container mobile-search">
-                    <input type="text" id="mobile-search-input" placeholder="Search videos...">
-                    <button id="mobile-search-button">
-                        <svg viewBox="0 0 24 24" focusable="false">
-                            <path
-                                d="M20.87,20.17l-5.59-5.59C16.35,13.35,17,11.75,17,10c0-3.87-3.13-7-7-7s-7,3.13-7,7s3.13,7,7,7c1.75,0,3.35-0.65,4.58-1.71 l5.59,5.59L20.87,20.17z M10,16c-3.31,0-6-2.69-6-6s2.69-6,6-6s6,2.69,6,6S13.31,16,10,16z">
-                            </path>
-                        </svg>
-                    </button>
-                </div>
+        </div>
+        <div class="mobile-menu">
+            <div class="search-container mobile-search">
+                <input type="text" id="mobile-search-input" placeholder="Search videos...">
+                <button id="mobile-search-button">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                        <path
+                            d="M20.87,20.17l-5.59-5.59C16.35,13.35,17,11.75,17,10c0-3.87-3.13-7-7-7s-7,3.13-7,7s3.13,7,7,7c1.75,0,3.35-0.65,4.58-1.71 l5.59,5.59L20.87,20.17z M10,16c-3.31,0-6-2.69-6-6s2.69-6,6-6s6,2.69,6,6S13.31,16,10,16z">
+                        </path>
+                    </svg>
+                </button>
             </div>
         </div>
     </header>
 
     <main>
         <div class="container">
-            <div class="filter-sort-container">
+            <div class="sort-container">
                 <div class="sort-options">
                     <select id="sort-by" class="sort-select">
                         <option value="default">Sort By</option>
@@ -56,23 +54,6 @@
                         <option value="likes">Most Likes</option>
                         <option value="date">Latest</option>
                     </select>
-                </div>
-                <div class="filter-options">
-                    <button id="filter-toggle" class="filter-button">
-                        <i class="fas fa-filter"></i> Filter
-                    </button>
-                    <div id="filter-dropdown" class="filter-dropdown">
-                        <div class="filter-item">
-                            <label for="min-views">Min Views:</label>
-                            <input type="number" id="min-views" placeholder="Min views">
-                        </div>
-                        <div class="filter-item">
-                            <label for="min-likes">Min Likes:</label>
-                            <input type="number" id="min-likes" placeholder="Min likes">
-                        </div>
-                        <button id="apply-filters" class="apply-button">Apply</button>
-                        <button id="reset-filters" class="reset-button">Reset</button>
-                    </div>
                 </div>
             </div>
 
@@ -88,9 +69,7 @@
             <div class="spinner"></div>
             <p>Loading videos...</p>
         </div>
-        <div class="pagination" id="pagination"></div>
     </main>
-
     <footer>
         <div class="footer-content">
             <p>&copy; 2023 YouTube Video Listing. All rights reserved.</p>
@@ -102,9 +81,6 @@
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
-
 </html>
-
